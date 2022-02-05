@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import styles from './index.module.sass';
+import classNames from 'classnames';
 import { TezosToolkit } from "@taquito/taquito";
-import "./App.css";
-import ConnectButton from "./components/ConnectWallet";
-import DisconnectButton from "./components/DisconnectWallet";
+import ConnectButton from "../components/ConnectWallet";
+import DisconnectButton from "../components/DisconnectWallet";
 import qrcode from "qrcode-generator";
-import UpdateContract from "./components/UpdateContract";
-import Transfers from "./components/Transfers";
+import UpdateContract from "../components/UpdateContract";
+import Transfers from "../components/Transfers";
+
+const cx = classNames.bind(styles);
 
 enum BeaconConnection {
   NONE = "",
@@ -44,18 +47,18 @@ const App = () => {
 
   if (publicToken && (!userAddress || isNaN(userBalance))) {
     return (
-      <div className="main-box">
+      <div className={cx('mainBox')}>
         <h1>Taquito Boilerplate</h1>
-        <div id="dialog">
+        <div className={cx('dialog')}>
           <header>Try the Taquito Boilerplate App!</header>
-          <div id="content">
-            <p className="text-align-center">
+          <div className={cx("content")}>
+            <p className={cx("text-align-center")}>
               <i className="fas fa-broadcast-tower"></i>&nbsp; Connecting to
               your wallet
             </p>
             <div
               dangerouslySetInnerHTML={generateQrCode()}
-              className="text-align-center"
+              className={cx("text-align-center")}
             ></div>
             <p id="public-token">
               {copiedPublicToken ? (

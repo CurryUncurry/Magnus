@@ -4,7 +4,7 @@ import { TezosToolkit } from "@taquito/taquito";
 const Transfers = ({
   Tezos,
   setUserBalance,
-  userAddress
+  userAddress,
 }: {
   Tezos: TezosToolkit;
   setUserBalance: Dispatch<SetStateAction<number>>;
@@ -40,13 +40,13 @@ const Transfers = ({
         type="text"
         placeholder="Recipient"
         value={recipient}
-        onChange={e => setRecipient(e.target.value)}
+        onChange={(e) => setRecipient(e.target.value)}
       />
       <input
         type="number"
         placeholder="Amount"
         value={amount}
-        onChange={e => setAmount(e.target.value)}
+        onChange={(e) => setAmount(e.target.value)}
       />
       <button
         className="button"

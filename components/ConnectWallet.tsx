@@ -4,7 +4,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   NetworkType,
   BeaconEvent,
-  defaultEventCallbacks
+  defaultEventCallbacks,
 } from "@airgap/beacon-sdk";
 import TransportU2F from "@ledgerhq/hw-transport-u2f";
 import { LedgerSigner } from "@taquito/ledger-signer";
@@ -32,7 +32,7 @@ const ConnectButton = ({
   contractAddress,
   setBeaconConnection,
   setPublicToken,
-  wallet
+  wallet,
 }: ButtonProps): JSX.Element => {
   const [loadingNano, setLoadingNano] = useState<boolean>(false);
 
@@ -53,8 +53,8 @@ const ConnectButton = ({
       await wallet.requestPermissions({
         network: {
           type: NetworkType.HANGZHOUNET,
-          rpcUrl: "https://hangzhounet.api.tez.ie"
-        }
+          rpcUrl: "https://hangzhounet.api.tez.ie",
+        },
       });
       // gets user's address
       const userAddress = await wallet.getPKH();
@@ -92,12 +92,12 @@ const ConnectButton = ({
         eventHandlers: {
           // To keep the pairing alert, we have to add the following default event handlers back
           [BeaconEvent.PAIR_INIT]: {
-            handler: defaultEventCallbacks.PAIR_INIT
+            handler: defaultEventCallbacks.PAIR_INIT,
           },
           [BeaconEvent.PAIR_SUCCESS]: {
-            handler: data => setPublicToken(data.publicKey)
-          }
-        }
+            handler: (data) => setPublicToken(data.publicKey),
+          },
+        },
       });
       Tezos.setWalletProvider(wallet);
       setWallet(wallet);
