@@ -1,14 +1,11 @@
 import { useState } from "react";
 import styles from './index.module.sass';
-import classNames from 'classnames';
 import { TezosToolkit } from "@taquito/taquito";
 import ConnectButton from "../components/ConnectWallet";
 import DisconnectButton from "../components/DisconnectWallet";
 import qrcode from "qrcode-generator";
 import UpdateContract from "../components/UpdateContract";
 import Transfers from "../components/Transfers";
-
-const cx = classNames.bind(styles);
 
 enum BeaconConnection {
   NONE = "",
@@ -47,18 +44,18 @@ const App = () => {
 
   if (publicToken && (!userAddress || isNaN(userBalance))) {
     return (
-      <div className={cx('mainBox')}>
+      <div className='mainBox'>
         <h1>Taquito Boilerplate</h1>
-        <div className={cx('dialog')}>
+        <div className='dialog'>
           <header>Try the Taquito Boilerplate App!</header>
-          <div className={cx("content")}>
-            <p className={cx("text-align-center")}>
+          <div className="content">
+            <p className="text-align-center">
               <i className="fas fa-broadcast-tower"></i>&nbsp; Connecting to
               your wallet
             </p>
             <div
               dangerouslySetInnerHTML={generateQrCode()}
-              className={cx("text-align-center")}
+              className="text-align-center"
             ></div>
             <p id="public-token">
               {copiedPublicToken ? (
