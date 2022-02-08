@@ -1,8 +1,11 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
+import tezosReducer from './tezosSlice';
+import walletReducer from './walletSlice';
 
 export const store = configureStore({
   reducer: {
-    // Add reducer
+    tezos: tezosReducer,
+    wallet: walletReducer
   },
 });
 
