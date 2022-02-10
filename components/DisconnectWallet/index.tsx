@@ -9,11 +9,10 @@ const DisconnectButton = () => {
   const dispatch = useAppDispatch();
 
   const disconnectWallet = async (): Promise<void> => {
-    // if (wallet) {
-    //   await wallet.client.removeAllAccounts();
-    //   await wallet.client.removeAllPeers();
-    //   await wallet.client.destroy();
-    // }
+    if (wallet) {
+      await wallet.client.clearActiveAccount();
+      await wallet.client.destroy();
+    }
     dispatch(walletDisconnect());
     dispatch(tezosDisconnect())
   };
