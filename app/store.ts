@@ -7,6 +7,13 @@ export const store = configureStore({
     tezos: tezosReducer,
     wallet: walletReducer
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['wallet/setWallet'],
+        ignoredPaths: ['tezos.tezos', 'wallet.wallet'],
+      },
+    }),
 });
 
 export type AppDispatch = typeof store.dispatch;
