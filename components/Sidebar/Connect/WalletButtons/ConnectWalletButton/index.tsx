@@ -2,6 +2,7 @@ import React, { FunctionComponent, ReactNode } from "react";
 import { Box, BoxProps, IconProps, useToken } from "@chakra-ui/react";
 import { useState } from "react";
 import PlusIcon from "../../../../Icons/PlusIcon";
+import { HoverHandlerType, useHover } from "../../../../../hooks/useHover";
 
 interface IProps {
     children: ReactNode;
@@ -9,22 +10,21 @@ interface IProps {
 }
 
 const ConnectWalletButton: FunctionComponent<IProps> = ({ children, ...rest }) => {
-    const [buttonHovered, setButtonHovered] = useState(false)
+    const [buttonHov, hovHandler] = useHover()
     const white = useToken('colors', 'white')
     const orange = useToken('colors', 'orange')
     const grey = useToken('colors', 'grey')
-
     return(
         <Box
             as="button"
             {...rest}
             {...buttonStyle}
-            onMouseEnter={() => setButtonHovered(true)}
-            onMouseLeave={() => setButtonHovered(false)}
+            onMouseEnter={hovHandler(true)}
+            onMouseLeave={hovHandler(false)}
         >
             <span>{children}</span>
             <PlusIcon
-                bgColor={buttonHovered ? orange : grey}
+                bgColor={buttonHov ? orange : grey}
                 color={white}
                 {...iconStyle}
             />
@@ -45,7 +45,8 @@ const buttonStyle = {
 
 const iconStyle = {
     w: '20px',
-    h: '20px'
+    h: '20px',
+    transition: '.3s ease'
 } as IconProps
 
 export default ConnectWalletButton;
