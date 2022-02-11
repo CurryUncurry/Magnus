@@ -1,5 +1,5 @@
 import { chakra, ChakraProps, OmitCommonProps } from '@chakra-ui/react'
-import chakraSvg from '../../hoc/chakraSvg'
+import chakraSvg from '../../../hoc/chakraSvg'
 import { SVGProps } from 'react'
 
 type PlusIconProps = {

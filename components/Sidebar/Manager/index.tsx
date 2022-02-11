@@ -1,12 +1,11 @@
-import { Box } from '@chakra-ui/react'
 import SidebarLabel from '../SidebarLabel'
 import ManagerButton from './ManagerButton'
-import PlusIcon from '../../../public/icons/manager/dashboard.svg'
+import DashboardIcon from '../../Icons/manager/DashboardIcon'
 
 const Manager = () => (
 	<>
 		<SidebarLabel>MANAGER</SidebarLabel>
-		<ManagerButton icon={<PlusIcon />} label="Dashboard"/>
+		<ManagerButton icon={<DashboardIcon color='white' />} label="Dashboard"/>
 	</>
 )
 export default Manager

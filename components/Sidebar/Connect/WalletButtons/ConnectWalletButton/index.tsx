@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
-import PlusIcon from '../../../../Icons/PlusIcon'
+import PlusIcon from '../../../../Icons/connect/PlusIcon'
 import { useHover } from '../../../../../hooks/useHover'
 
 interface IProps {
