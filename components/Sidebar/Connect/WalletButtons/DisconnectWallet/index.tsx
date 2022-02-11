@@ -1,8 +1,8 @@
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { disconnect as walletDisconnect } from "../../app/walletSlice";
-import { disconnect as tezosDisconnect } from "../../app/tezosSlice";
-import { Button } from "@chakra-ui/react";
+import { useAppDispatch, useAppSelector } from "../../../../../app/hooks";
+import { disconnect as walletDisconnect } from "../../../../../app/walletSlice";
+import { disconnect as tezosDisconnect } from "../../../../../app/tezosSlice";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 const DisconnectButton = () => {
   const wallet = useAppSelector((state) => state.wallet.wallet);
@@ -18,9 +18,9 @@ const DisconnectButton = () => {
   };
 
   return (
-    <Button onClick={disconnectWallet}>
-      <i className="fas fa-times"></i>&nbsp; Disconnect wallet
-    </Button>
+    <ConnectWalletButton onClick={disconnectWallet}>
+      Disconnect wallet
+    </ConnectWalletButton>
   );
 };
 

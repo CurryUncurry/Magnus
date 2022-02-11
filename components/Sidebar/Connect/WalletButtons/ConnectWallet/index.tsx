@@ -5,10 +5,10 @@ import {
   BeaconEvent,
   defaultEventCallbacks,
 } from "@airgap/beacon-sdk";
-import { RPCURL } from "../../config/constants";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { connect, setPublicToken, setWallet } from "../../app/walletSlice";
-import { Button } from "@chakra-ui/react";
+import { RPCURL } from "../../../../../config/constants";
+import { useAppDispatch, useAppSelector } from "../../../../../app/hooks";
+import { connect, setPublicToken, setWallet } from "../../../../../app/walletSlice";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 const ConnectButton = () => {
   const wallet = useAppSelector((state) => state.wallet.wallet);
@@ -62,11 +62,9 @@ const ConnectButton = () => {
   }, []);
 
   return (
-    <Button onClick={connectWallet}>
-      <span>
-        <i className="fas fa-wallet" /> Connect with wallet
-      </span>
-    </Button>
+    <ConnectWalletButton onClick={connectWallet}>
+        Connect Wallet
+    </ConnectWalletButton>
   );
 };
 

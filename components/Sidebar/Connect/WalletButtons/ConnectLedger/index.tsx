@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import TransportU2F from "@ledgerhq/hw-transport-u2f";
 import { HDPathTemplate, LedgerSigner } from "@taquito/ledger-signer";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { connect } from "../../app/walletSlice";
-import { Button } from "@chakra-ui/react";
+import { useAppDispatch, useAppSelector } from "../../../../../app/hooks";
+import { connect } from "../../../../../app/walletSlice";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 const ConnectLedger = () => {
   const [loadingNano, setLoadingNano] = useState<boolean>(false);
@@ -28,17 +28,13 @@ const ConnectLedger = () => {
   };
 
   return (
-    <Button disabled={loadingNano} onClick={connectNano}>
+    <ConnectWalletButton onClick={connectNano}>
       {loadingNano ? (
-        <span>
-          <i className="fas fa-spinner fa-spin"></i>&nbsp; Loading, please wait
-        </span>
+          'Loading'
       ) : (
-        <span>
-          <i className="fab fa-usb"></i>&nbsp; Connect with Ledger Nano
-        </span>
+          'Connect Ledger'
       )}
-    </Button>
+    </ConnectWalletButton>
   );
 };
 
