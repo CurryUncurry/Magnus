@@ -1,8 +1,7 @@
-import Header from "../components/Header";
+import Header from '../components/Header'
 
 const Staking = () => {
-    return <span>Staking page</span>
-};
-  
-export default Staking;
-  
+	return <span>Staking page</span>
+}
+
+export default Staking

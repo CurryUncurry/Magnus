@@ -1,0 +1,17 @@
+{
+    "extends": [
+      "ts-standard"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "no-tabs" : 0,
+      "no-multi-spaces" : 1
+    }
+}
