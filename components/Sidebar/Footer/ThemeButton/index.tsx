@@ -54,7 +54,6 @@ const themeButtonStyle = {
 	transition: '.3s ease',
 	cursor: 'pointer',
 	marginTop: 'auto',
-	padding: '16px 28px',
 	display: 'flex',
 	flexDirection: 'row',
 	background: colors['black']

@@ -49,7 +49,7 @@ const boostBlockStyle = {
 	flexDirection: 'row',
 	background: colors['black'],
 	justifyContent: 'space-between',
-	width: '100%',
+	width: '132px',
 	borderRadius: '8px',
 	padding: '6px'
 } as BoxProps

@@ -3,7 +3,7 @@ import React from 'react'
 import { useAppSelector } from '../../../app/hooks'
 import { colors, iconStyles } from '../../../theme/foundations'
 import LightIcon from '../../Icons/theme/LightIcon'
-import MoonIcon from '../../Icons/theme/moonIcon'
+import MoonIcon from '../../Icons/theme/MoonIcon'
 import ThemeButton from './ThemeButton'
 
 const themes = [
@@ -37,9 +37,11 @@ const Footer = () => {
 
 const footerStyle = {
 	marginTop: 'auto',
-	padding: '16px 28px',
+	padding: '16px',
 	display: 'flex',
 	flexDirection: 'row',
+	justifyContent: 'space-around',
+	alignItems: 'center',
 	background: colors['black']
 } as BoxProps
 
