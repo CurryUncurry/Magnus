@@ -1,4 +1,4 @@
-# [Ω Magnus DAO Frontend](https://magnus.vercel.app/)
+# [🍛 Magnus DAO Frontend](https://magnus.vercel.app/)
 
 ## 🔧 Setting up Local Development
 
