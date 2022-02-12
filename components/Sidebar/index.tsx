@@ -1,24 +1,20 @@
-import { Box, BoxProps, Slide } from '@chakra-ui/react'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { Box, BoxProps, ResponsiveValue } from '@chakra-ui/react'
+import { useAppSelector } from '../../app/hooks'
 import { colors } from '../../theme/foundations'
 import Connect from './Connect'
 import Header from './Header'
 import Manager from './Manager'
-import SidebarLabel from './SidebarLabel'
 import TokenPrice from './TokenPrice'
-import { open } from './sidebarSlice'
-import SidebarArrow from './SidebarArrow'
 import NFTAvatar from './NFTAvatar'
 import Footer from './Footer'
 
-const Sidebar = () => {
-	const isSidebarOpen = useAppSelector((state) => state.sidebar.isOpen)
-	const isConnected = useAppSelector((state) => state.wallet.beaconConnection)
-	const dispatch = useAppDispatch()
+const sidebarWidth: ResponsiveValue<string> = '323px'
 
+const Sidebar = () => {
+	const isConnected = useAppSelector((state) => state.wallet.beaconConnection)
 	return (
 		<>
-			<Slide direction="left" in={isSidebarOpen} style={{ width: 'auto' }}>
+			<Box {...sidebarPlaceholder}>
 				<Box {...sidebarStyle}>
 					<Box padding="28px">
 						<Header />
@@ -29,13 +25,7 @@ const Sidebar = () => {
 					</Box>
 					<Footer />
 				</Box>
-			</Slide>
-			{!isSidebarOpen ? (
-				<SidebarArrow
-					onClick={() => dispatch(open())}
-					styles={sidebarArrowStyle}
-				/>
-			) : null}
+			</Box>
 		</>
 	)
 }
@@ -43,13 +33,18 @@ const Sidebar = () => {
 const sidebarStyle = {
 	display: 'flex',
 	flexDirection: 'column',
-	height: '100%',
 	paddingBottom: '0px',
-	background: colors['black-secondary']
+	background: colors['black-secondary'],
+	h: 'calc(100 * var(--vh))',
+	pos: 'fixed',
+	left: 0,
+	top: 0,
+	w: sidebarWidth
 } as BoxProps
 
-const sidebarArrowStyle = {
-	marginTop: '22px'
+const sidebarPlaceholder = {
+	w: sidebarWidth,
+	h: '100%'
 } as BoxProps
 
 export default Sidebar

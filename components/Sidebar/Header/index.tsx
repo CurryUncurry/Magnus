@@ -3,8 +3,6 @@ import Link from 'next/link'
 import React from 'react'
 import { useAppDispatch } from '../../../app/hooks'
 import LogoIcon from '../../Icons/header/LogoIcon'
-import SidebarArrow from '../SidebarArrow'
-import { close } from '../sidebarSlice'
 
 const Header = () => {
 	const dispatch = useAppDispatch()
@@ -17,10 +15,6 @@ const Header = () => {
 					<LogoIcon color={color} {...logoIconStyle} />
 				</a>
 			</Link>
-			<SidebarArrow
-				onClick={() => dispatch(close())}
-				styles={sidebarArrowStyle}
-			/>
 		</Box>
 	)
 }

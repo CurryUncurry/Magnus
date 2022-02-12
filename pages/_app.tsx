@@ -6,9 +6,11 @@ import { useRouter } from 'next/router'
 import Sidebar from '@components/Sidebar'
 import theme from '../theme'
 import '@public/fonts/stylesheet.css'
+import { useVh } from '@hooks/useVh'
 
 export default function App ({ Component, pageProps }: AppProps) {
 	const router = useRouter()
+	useVh()
 
 	return (
 		<ChakraProvider theme={theme}>
