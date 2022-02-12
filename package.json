@@ -54,7 +54,6 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.2.1",
     "eslint-config-next": "11.0.1",
     "eslint-config-ts-standard": "^1.0.5",
     "eslint-plugin-standard": "^5.0.0",
