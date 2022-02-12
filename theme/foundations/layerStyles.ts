@@ -1,6 +1,6 @@
 const layerStyles = {
-  shadow1: {
-    boxShadow: '0px 10px 15px rgba(0, 0, 0, 0.05)'
+  orangeShadow: {
+    boxShadow: '2px 0px 8px rgba(245, 115, 81, 0.45);'
   },
   shadow2: {
     boxShadow: '2px 6px 8px 3px rgba(0, 0, 0, 0.05)'

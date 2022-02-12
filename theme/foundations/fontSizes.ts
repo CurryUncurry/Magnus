@@ -5,8 +5,9 @@ const fontSizes = {
   h4: '2.4rem',
   h5: '2rem',
   formField: '1.8rem',
-  text: '1.6rem',
-  cardText: '1.8rem'
+  cardText: '1.8rem',
+  text: '1rem',
+  secText: '0.75rem',
 }
 
 export default fontSizes

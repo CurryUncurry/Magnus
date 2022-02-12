@@ -23,18 +23,6 @@ const textStyles = {
     fontSize: 'h5',
     fontWeight: 600,
     lineHeight: 1
-  },
-  tourcard: {
-    fontSize: 'text',
-    fontWeight: '400',
-    color: '#5C5C5C',
-    lineHeight: 1.5
-  },
-  basecard: {
-    fontSize: 'cardText',
-    fontWeight: '400',
-    color: '#5C5C5C',
-    lineHeight: 1.5
   }
 }
 
