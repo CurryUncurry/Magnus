@@ -1,4 +1,4 @@
-import { Box, BoxProps, ResponsiveValue } from '@chakra-ui/react'
+import { Box, BoxProps, ResponsiveValue, useColorModeValue } from '@chakra-ui/react'
 import { useAppSelector } from '../../app/hooks'
 import { colors } from '../../theme/foundations'
 import Connect from './Connect'
@@ -8,14 +8,15 @@ import TokenPrice from './TokenPrice'
 import NFTAvatar from './NFTAvatar'
 import Footer from './Footer'
 
-const sidebarWidth: ResponsiveValue<string> = '323px'
+const sidebarWidth: ResponsiveValue<string> = '232px'
 
 const Sidebar = () => {
 	const isConnected = useAppSelector((state) => state.wallet.beaconConnection)
+	const bgColor = useColorModeValue('white', 'black-secondary')
 	return (
 		<>
 			<Box {...sidebarPlaceholder}>
-				<Box {...sidebarStyle}>
+				<Box {...sidebarStyle} bg={bgColor}>
 					<Box padding="28px">
 						<Header />
 						<Connect />
@@ -34,7 +35,6 @@ const sidebarStyle = {
 	display: 'flex',
 	flexDirection: 'column',
 	paddingBottom: '0px',
-	background: colors['black-secondary'],
 	h: 'calc(100 * var(--vh))',
 	pos: 'fixed',
 	left: 0,

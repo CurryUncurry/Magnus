@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react'
-import { Box, BoxProps, useToken } from '@chakra-ui/react'
+import { Box, BoxProps, useColorModeValue, useToken } from '@chakra-ui/react'
 import PlusIcon from '../../../../Icons/connect/PlusIcon'
 import { useHover } from '../../../../../hooks/useHover'
 import colors from '../../../../../theme/foundations/colors'
@@ -18,11 +18,13 @@ const ConnectWalletButton: FunctionComponent<IProps> = ({
 	const white = useToken('colors', 'white')
 	const orange = useToken('colors', 'orange')
 	const grey = useToken('colors', 'grey')
+	const color = useColorModeValue('black', 'white')
 	return (
 		<Box
 			as="button"
 			{...rest}
 			{...buttonStyle}
+			color={color}
 			onMouseEnter={hovHandler(true)}
 			onMouseLeave={hovHandler(false)}
 		>
@@ -40,7 +42,6 @@ const buttonStyle = {
 	padding: '11px 0',
 	display: 'flex',
 	fontSize: fontSizes['text'],
-	color: colors['white'],
 	alignItems: 'center',
 	justifyContent: 'space-between',
 	background: 'none',

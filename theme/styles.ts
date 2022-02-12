@@ -8,7 +8,8 @@ const styles = {
 		body: {
 			fontSize: 'text',
 			overflowX: 'hidden',
-			bg: mode('#ffffff', '#111111')(props)
+			bg: mode('#ffffff', '#111111')(props),
+			color: mode('#111111', '#ffffff')(props)
 		},
 		h1: {
 			textStyle: 'h1'

@@ -67,7 +67,7 @@ const ConnectButton = () => {
 
 	return (
 		<ConnectWalletButton onClick={connectWallet}>
-      Connect Wallet
+			Connect Wallet
 		</ConnectWalletButton>
 	)
 }

@@ -5,7 +5,6 @@ import { useAppDispatch } from '../../../app/hooks'
 import LogoIcon from '../../Icons/header/LogoIcon'
 
 const Header = () => {
-	const dispatch = useAppDispatch()
 	const color = useToken('colors', 'white')
 
 	return (
@@ -23,11 +22,5 @@ const logoIconStyle = {
 	width: '32px',
 	height: '32px'
 } as IconProps
-
-const sidebarArrowStyle = {
-	position: 'absolute',
-	right: '-28px',
-	top: '4px'
-} as BoxProps
 
 export default Header
