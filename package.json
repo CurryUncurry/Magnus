@@ -22,6 +22,7 @@
     "eslint": "^8.8.0",
     "framer-motion": "^5.6.0",
     "next": "^12.0.10",
+    "next-images": "^1.8.4",
     "qrcode-generator": "^1.4.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -35,7 +36,7 @@
     "start": "next start",
     "lint": "next lint",
     "ts-check": "tsc --noEmit",
-    "lint-fix": "eslint ./components/** ./pages/** -c .eslintrc.json --fix --ext ts,tsx",
+    "lint-fix": "eslint ./components/** ./pages/** ./app/** ./hoc/** ./hooks/** ./theme/** -c .eslintrc.json --fix --ext ts,tsx",
     "update-taquito": "ncu -u --target newest --filter '/^@taquito.*$/' && npm i",
     "prepare": "husky install"
   },
@@ -55,7 +56,6 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.2.1",
     "eslint-config-next": "11.0.1",
     "eslint-config-ts-standard": "^1.0.5",
     "eslint-plugin-standard": "^5.0.0",

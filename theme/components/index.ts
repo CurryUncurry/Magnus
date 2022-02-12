@@ -7,13 +7,13 @@ import Table from './Table'
 import Avatar from './Avatar'
 
 const components = {
-  Badge,
-  Radio,
-  Checkbox,
-  Tooltip,
-  Button,
-  Table,
-  Avatar
+	Badge,
+	Radio,
+	Checkbox,
+	Tooltip,
+	Button,
+	Table,
+	Avatar
 }
 
 export default components

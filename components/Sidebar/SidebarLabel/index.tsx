@@ -1,8 +1,9 @@
 import { Box } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
+import { colors } from '../../../theme/foundations'
 
 interface IProps {
-    children: ReactNode
+  children: ReactNode;
 }
 
 const SidebarLabel = ({ children }: IProps) => (
@@ -11,9 +12,9 @@ const SidebarLabel = ({ children }: IProps) => (
 
 const delimeterStyle = {
 	fontSize: '12px',
-	color: '#949494',
+	color: colors['gray94'],
 	fontWeight: '500',
-	padding: '13.5px 28px'
+	margin: '11px 0'
 }
 
 export default SidebarLabel

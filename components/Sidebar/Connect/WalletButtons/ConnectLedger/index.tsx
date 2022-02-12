@@ -29,11 +29,7 @@ const ConnectLedger = () => {
 
 	return (
 		<ConnectWalletButton onClick={connectNano}>
-			{loadingNano ? (
-				'Loading'
-			) : (
-				'Connect Ledger'
-			)}
+			{loadingNano ? 'Loading' : 'Connect Ledger'}
 		</ConnectWalletButton>
 	)
 }
