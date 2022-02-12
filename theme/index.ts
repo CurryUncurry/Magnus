@@ -4,19 +4,19 @@ import components from './components'
 import styles from './styles'
 
 const theme = extendTheme({
-  fonts: {
-    body: 'Gilroy, sans-serif',
-    heading: 'Gilroy, sans-serif'
-  },
-  colors,
-  radii: {
-    base: '0.5rem'
-  },
-  textStyles,
-  layerStyles,
-  fontSizes,
-  styles,
-  components
+	fonts: {
+		body: 'Gilroy, sans-serif',
+		heading: 'Gilroy, sans-serif'
+	},
+	colors,
+	radii: {
+		base: '0.5rem'
+	},
+	textStyles,
+	layerStyles,
+	fontSizes,
+	styles,
+	components
 })
 
 export default theme

@@ -1,13 +1,13 @@
-import { useState } from "react"
+import { useState } from 'react'
 
-export type HoverHandlerType = (bool: boolean) => () => void
+export type HoverHandlerType = (bool: boolean) => () => void;
 
-export const useHover = (initialState: boolean = false): [boolean, HoverHandlerType] => {
-    const [elementHovered, setElementHovered] = useState<boolean>(initialState)
-    const hoverHandler: HoverHandlerType = (bool: boolean) => () => setElementHovered(bool)
+export const useHover = (
+	initialState: boolean = false
+): [boolean, HoverHandlerType] => {
+	const [elementHovered, setElementHovered] = useState<boolean>(initialState)
+	const hoverHandler: HoverHandlerType = (bool: boolean) => () =>
+		setElementHovered(bool)
 
-    return [
-        elementHovered,
-        hoverHandler
-    ]
+	return [elementHovered, hoverHandler]
 }

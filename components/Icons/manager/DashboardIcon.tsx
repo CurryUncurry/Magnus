@@ -2,13 +2,15 @@ import { chakra, ChakraProps, OmitCommonProps } from '@chakra-ui/react'
 import chakraSvg from '../../../hoc/chakraSvg'
 import { SVGProps } from 'react'
 
-function DashboardIcon (props: OmitCommonProps<SVGProps<SVGSVGElement>, keyof ChakraProps>) {
+function DashboardIcon (
+	props: OmitCommonProps<SVGProps<SVGSVGElement>, keyof ChakraProps>
+) {
 	return (
 		<chakra.svg
-			width='1em'
-			height='1em'
-			viewBox='0 0 20 20'
-			fill='none'
+			width="1em"
+			height="1em"
+			viewBox="0 0 20 20"
+			fill="none"
 			{...props}
 		>
 			<path

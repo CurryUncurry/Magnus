@@ -6,11 +6,14 @@ import colors from '../../../../../theme/foundations/colors'
 import { fontSizes, iconStyles } from '../../../../../theme/foundations'
 
 interface IProps {
-    children: ReactNode;
-    onClick: () => void;
+  children: ReactNode;
+  onClick: () => void;
 }
 
-const ConnectWalletButton: FunctionComponent<IProps> = ({ children, ...rest }) => {
+const ConnectWalletButton: FunctionComponent<IProps> = ({
+	children,
+	...rest
+}) => {
 	const [buttonHov, hovHandler] = useHover()
 	const white = useToken('colors', 'white')
 	const orange = useToken('colors', 'orange')
@@ -34,7 +37,7 @@ const ConnectWalletButton: FunctionComponent<IProps> = ({ children, ...rest }) =
 }
 
 const buttonStyle = {
-	padding: '11px 28px',
+	padding: '11px 0',
 	display: 'flex',
 	fontSize: fontSizes['text'],
 	color: colors['white'],

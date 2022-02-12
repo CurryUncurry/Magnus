@@ -7,7 +7,6 @@ import { colors, fontSizes, iconStyles } from '../../../../theme/foundations'
 interface IProps {
   icon: (color: string) => ReactNode;
   label: string;
-  // href: string;
   isActive?: boolean;
 }
 
@@ -58,7 +57,7 @@ const iconStyle = {
 
 const managerButtonStyle = {
 	cursor: 'pointer',
-	padding: '13.5px 28px',
+	padding: '13.5px 0',
 	fontSize: fontSizes['text'],
 	fontWeight: '500',
 	alignItems: 'center',

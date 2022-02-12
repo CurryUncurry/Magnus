@@ -7,7 +7,11 @@ import {
 } from '@airgap/beacon-sdk'
 import { RPCURL } from '../../../../../config/constants'
 import { useAppDispatch, useAppSelector } from '../../../../../app/hooks'
-import { connect, setPublicToken, setWallet } from '../../../../../app/walletSlice'
+import {
+	connect,
+	setPublicToken,
+	setWallet
+} from '../../../../../app/walletSlice'
 import ConnectWalletButton from '../ConnectWalletButton'
 
 const ConnectButton = () => {
@@ -63,7 +67,7 @@ const ConnectButton = () => {
 
 	return (
 		<ConnectWalletButton onClick={connectWallet}>
-        Connect Wallet
+      Connect Wallet
 		</ConnectWalletButton>
 	)
 }
