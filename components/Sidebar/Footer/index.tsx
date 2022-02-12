@@ -1,34 +1,45 @@
-import { Box, BoxProps } from '@chakra-ui/react'
-import React from 'react'
-import { useAppSelector } from '../../../app/hooks'
-import { colors, iconStyles } from '../../../theme/foundations'
-import LightIcon from '../../Icons/theme/LightIcon'
-import MoonIcon from '../../Icons/theme/MoonIcon'
+import { Box, BoxProps, ColorMode, useColorMode } from '@chakra-ui/react'
+import React, { FC } from 'react'
+import { iconStyles } from '@theme/foundations'
+import LightIcon from '@components/Icons/theme/LightIcon'
+import MoonIcon from '@components/Icons/theme/MoonIcon'
 import ThemeButton from './ThemeButton'
 
-const themes = [
+type ThemesArray = {
+	label: string,
+	mode: ColorMode,
+	icon: (color: string) => JSX.Element
+}[]
+
+const themes: ThemesArray = [
 	{
 		label: 'Light',
+		mode: 'light',
 		icon: (color: string) => (
 			<LightIcon {...iconStyles.defaultIcon} color={color} />
 		)
 	},
 	{
 		label: 'Dark',
+		mode: 'dark',
 		icon: (color: string) => (
 			<MoonIcon {...iconStyles.defaultIcon} color={color} />
 		)
 	}
 ]
 
-const Footer = () => {
-	const selectedTheme = useAppSelector((state) => state.sidebar.theme)
+const Footer: FC<BoxProps> = ({ ...rest }) => {
+	const { colorMode, toggleColorMode } = useColorMode()
+	const handleToggle = (mode: ColorMode) => {
+		colorMode !== mode && toggleColorMode()
+	}
 	return (
-		<Box {...footerStyle}>
+		<Box {...footerStyle} {...rest}>
 			{themes.map((theme) => (
 				<ThemeButton
+					onClick={() => handleToggle(theme.mode)}
 					{...theme}
-					isActive={theme.label.toLowerCase() === selectedTheme}
+					isActive={theme.mode === colorMode}
 				/>
 			))}
 		</Box>
@@ -42,7 +53,7 @@ const footerStyle = {
 	flexDirection: 'row',
 	justifyContent: 'space-around',
 	alignItems: 'center',
-	background: colors['black']
+	background: 'black'
 } as BoxProps
 
 export default Footer

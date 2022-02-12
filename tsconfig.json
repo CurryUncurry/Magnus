@@ -29,7 +29,8 @@
       "@hooks/*": ["hooks/*"],
       "@public/*": ["public/*"],
       "@theme/*": ["theme/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "exclude": [

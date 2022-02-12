@@ -1,9 +1,9 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, ThemeConfig } from '@chakra-ui/react'
 import { colors, fontSizes, layerStyles, textStyles } from './foundations'
 import components from './components'
 import styles from './styles'
 
-const theme = extendTheme({
+const theme: ThemeConfig = extendTheme({
 	fonts: {
 		body: 'Gilroy, sans-serif',
 		heading: 'Gilroy, sans-serif'
@@ -16,7 +16,9 @@ const theme = extendTheme({
 	layerStyles,
 	fontSizes,
 	styles,
-	components
+	components,
+	initialColorMode: 'dark',
+	useSystemColorMode: true
 })
 
 export default theme

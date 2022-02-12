@@ -1,15 +1,15 @@
 import { Box, BoxProps, useToken } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
-import { useHover } from '../../../../hooks/useHover'
-import { colors, layerStyles } from '../../../../theme/foundations'
+import { useHover } from '@hooks/useHover'
+import { colors, layerStyles } from '@theme/foundations'
 
-interface IProps {
+type IProps = {
   icon: (color: string) => ReactNode;
   label: string;
   isActive?: boolean;
-}
+} & BoxProps
 
-const ThemeButton = ({ icon, label, isActive = false }: IProps) => {
+const ThemeButton = ({ icon, label, isActive = false, ...rest }: IProps) => {
 	const [buttonHov, hovHandler] = useHover()
 	const white = useToken('colors', 'white')
 	const gray94 = useToken('colors', 'gray94')
@@ -22,6 +22,7 @@ const ThemeButton = ({ icon, label, isActive = false }: IProps) => {
 			{...(isActive ? activeThemeButtonStyle : {})}
 			onMouseEnter={hovHandler(true)}
 			onMouseLeave={hovHandler(false)}
+			{...rest}
 		>
 			<Box {...iconStyle}>
 				{icon(isActive || buttonHov ? white : gray94)}

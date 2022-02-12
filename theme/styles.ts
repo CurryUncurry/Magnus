@@ -1,12 +1,14 @@
+import { mode } from '@chakra-ui/theme-tools'
+
 const styles = {
-	global: {
+	global: (props: any) => ({
 		html: {
 			fontSize: '16px'
 		},
 		body: {
 			fontSize: 'text',
 			overflowX: 'hidden',
-			bg: '#fafdfe'
+			bg: mode('#ffffff', '#111111')(props)
 		},
 		h1: {
 			textStyle: 'h1'
@@ -23,7 +25,7 @@ const styles = {
 		h5: {
 			textStyle: 'h5'
 		}
-	}
+	})
 }
 
 export default styles
