@@ -36,7 +36,7 @@
     "start": "next start",
     "lint": "next lint",
     "ts-check": "tsc --noEmit",
-    "lint-fix": "eslint ./components/** ./pages/** ./app/** ./hoc/** ./hooks/** ./theme/** -c .eslintrc.json --fix --ext ts,tsx",
+    "lint-fix": "eslint ./components/** ./pages/** ./app/** ./hoc/** ./theme/** -c .eslintrc.json --fix --ext ts,tsx",
     "update-taquito": "ncu -u --target newest --filter '/^@taquito.*$/' && npm i",
     "prepare": "husky install"
   },

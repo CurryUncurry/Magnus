@@ -25,3 +25,6 @@ yarn.lock
 
 # next
 .next
+
+# tsconfig cache
+tsconfig.tsbuildinfo

@@ -1,4 +1,4 @@
-import { Box, BoxProps, IconProps } from '@chakra-ui/react'
+import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
 import Link from 'next/link'
 import React from 'react'
 import { useAppDispatch } from '../../../app/hooks'
@@ -8,12 +8,13 @@ import { close } from '../sidebarSlice'
 
 const Header = () => {
 	const dispatch = useAppDispatch()
+	const color = useToken('colors', 'white')
 
 	return (
 		<Box position="relative" marginBottom="33px">
 			<Link href="/dashboard">
 				<a>
-					<LogoIcon {...logoIconStyle} />
+					<LogoIcon color={color} {...logoIconStyle} />
 				</a>
 			</Link>
 			<SidebarArrow

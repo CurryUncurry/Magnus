@@ -4,32 +4,36 @@ import Image from 'next/image'
 import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
 import { colors, iconStyles, layerStyles } from '../../../theme/foundations'
 import MoneyIcon from '../../Icons/nftAvatar/MoneyIcon'
-import BoostIcon from '../../Icons/nftAvatar/boostIcon'
+import BoostIcon from '../../Icons/nftAvatar/BoostIcon'
 import LockIcon from '../../Icons/nftAvatar/LockIcon'
 import TimeIcon from '../../Icons/nftAvatar/TimeIcon'
 
-const NFTAvatar = () => (
-	<>
-		<SidebarLabel>MY NFT AVATAR</SidebarLabel>
-		<Box display="flex" flexDirection="row" alignItems="center" margin="12px 0">
-			<Box minWidth="32px" height="32px">
-				<Image src="/mockNFT.png" width={32} height={32} />
+const NFTAvatar = () => {
+	const color = useToken('colors', 'white')
+
+	return (
+		<>
+			<SidebarLabel>MY NFT AVATAR</SidebarLabel>
+			<Box display="flex" flexDirection="row" alignItems="center" margin="12px 0">
+				<Box minWidth="32px" height="32px">
+					<Image src="/mockNFT.png" width={32} height={32} />
+				</Box>
+				<Box
+					{...delimiterStyle}
+					transform="matrix(-1, 0, 0, 1, 0, 0);"
+					marginRight="8px"
+				/>
+				<Box {...delimiterStyle} />
+				<Box {...boostBlockStyle}>
+					<MoneyIcon color={color} {...boostIconStyles} />
+					<BoostIcon color={color} {...boostIconStyles} />
+					<LockIcon color={color} {...boostIconStyles} />
+					<TimeIcon color={color} {...boostIconStyles} />
+				</Box>
 			</Box>
-			<Box
-				{...delimiterStyle}
-				transform="matrix(-1, 0, 0, 1, 0, 0);"
-				marginRight="8px"
-			/>
-			<Box {...delimiterStyle} />
-			<Box {...boostBlockStyle}>
-				<MoneyIcon {...boostIconStyles} />
-				<BoostIcon {...boostIconStyles} />
-				<LockIcon {...boostIconStyles} />
-				<TimeIcon {...boostIconStyles} />
-			</Box>
-		</Box>
-	</>
-)
+		</>
+	)
+}
 
 const boostIconStyles = {
 	...iconStyles.defaultIcon,

@@ -1,21 +1,25 @@
-import { Box, BoxProps, IconProps } from '@chakra-ui/react'
+import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
 import { colors, iconStyles } from '../../../theme/foundations'
 import DropdownArrow from '../../Icons/tokenPrice/DropdownArrow'
 import SidebarLabel from '../SidebarLabel'
 
-const TokenPrice = () => (
-	<>
-		<SidebarLabel>TOKEN PRICE</SidebarLabel>
-		<Box {...currencyStyle}>
-			<Box marginBottom="6px">Course</Box>
-			<Box {...dropdownButtonStyle}>
-				<span>1 MG = 1.3 $</span>
+const TokenPrice = () => {
+	const color= useToken('colors', 'white')
 
-				<DropdownArrow {...iconStyle} />
+	return (
+		<>
+			<SidebarLabel>TOKEN PRICE</SidebarLabel>
+			<Box {...currencyStyle}>
+				<Box marginBottom="6px">Course</Box>
+				<Box {...dropdownButtonStyle}>
+					<span>1 MG = 1.3 $</span>
+
+					<DropdownArrow color={color} {...iconStyle} />
+				</Box>
 			</Box>
-		</Box>
-	</>
-)
+		</>
+	)
+}
 
 const iconStyle = {
 	...iconStyles.dropdownIcon,
