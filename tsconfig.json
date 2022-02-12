@@ -19,7 +19,18 @@
     "noEmit": true,
     "jsx": "preserve",
     "noFallthroughCasesInSwitch": true,
-    "incremental": true
+    "incremental": true,
+    "baseUrl" : "./",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@app/*": ["app/*"],
+      "@config/*": ["config/*"],
+      "@hoc/*": ["hoc/*"],
+      "@hooks/*": ["hooks/*"],
+      "@public/*": ["public/*"],
+      "@theme/*": ["theme/*"],
+      "@pages/*": ["pages/*"]
+    }
   },
   "exclude": [
     "node_modules"
