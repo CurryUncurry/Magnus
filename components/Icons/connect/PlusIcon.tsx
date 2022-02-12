@@ -16,7 +16,7 @@ function PlusIcon (props: PlusIconProps) {
 			fill="none"
 			{...rest}
 		>
-			<circle cx="10" cy="10" r="10" fill={bgColor || '#373737'} />
+			<circle cx="10" cy="10" r="10" fill={bgColor || '#373737'} style={{ transition: '.3s' }} />
 			<rect
 				x="9.33331"
 				y="6"
