@@ -1,6 +1,7 @@
 {
     "extends": [
-      "ts-standard"
+      "ts-standard",
+      "plugin:@next/next/recommended"
     ],
     "rules": {
       "indent": [
