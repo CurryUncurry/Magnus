@@ -1,5 +1,5 @@
 import { Box, BoxProps, Flex, FlexProps, Grid, GridProps } from '@chakra-ui/react'
-import { MarketValueGraph, OHMStakedGraph, ProtocolOwnedLiquidityGraph, RiskFreeValueGraph, RunwayAvailableGraph, TotalValueDepositedGraph } from '@components/Graph'
+import { MarketValueGraph, MAGStakedGraph, ProtocolOwnedLiquidityGraph, RiskFreeValueGraph, RunwayAvailableGraph, TotalValueDepositedGraph } from '@components/Graph'
 import ValueCard, { ValueCardProps } from '@components/ValueCard'
 import { valueCards } from '@utils/datamocks'
 import { FC } from 'react'
@@ -42,7 +42,7 @@ const Dashboard: FC = () => {
 				</Box>
 
 				<Box {...chartBoxStyle}>
-					<OHMStakedGraph />
+					<MAGStakedGraph />
 				</Box>
 
 				<Box {...chartBoxStyle}>

@@ -183,7 +183,7 @@ export const tooltipItems = {
 	tvl: [`Total Value Deposited`],
 	coin: ['DAI', 'FRAX', 'ETH', 'LUSD', 'BTC', 'UST', 'Other'],
 	rfv: ['DAI', 'FRAX', 'LUSD', 'UST'],
-	holder: ['OHMies'],
+	holder: ['MAGies'],
 	apy: ['APY'],
 	runway: [`Current`, '7.5K APY', '5K APY', '2.5K APY'],
 	pol: [`SLP Treasury`, `Market SLP`]
@@ -191,14 +191,14 @@ export const tooltipItems = {
 
 export const tooltipInfoMessages = () => {
 	return {
-		tvl: `Total Value Deposited, is the dollar amount of all OHM staked in the protocol. This metric is often used as growth or health indicator in DeFi projects.`,
+		tvl: `Total Value Deposited, is the dollar amount of all MAG staked in the protocol. This metric is often used as growth or health indicator in DeFi projects.`,
 		mvt: `Market Value of Treasury Assets, is the sum of the value (in dollars) of all assets held by the treasury.`,
-		rfv: `Risk Free Value, is the amount of funds the treasury guarantees to use for backing OHM.`,
+		rfv: `Risk Free Value, is the amount of funds the treasury guarantees to use for backing MAG.`,
 		pol: `Protocol Owned Liquidity, is the amount of LP the treasury owns and controls. The more POL the better for the protocol and its users.`,
-		holder: `Holders, represents the total number of Ohmies (sOHM holders)`,
-		staked: `OHM Staked is the ratio of sOHM to circulating supply of OHM (staked vs total)`,
+		holder: `Holders, represents the total number of Ohmies (sMAG holders)`,
+		staked: `MAG Staked is the ratio of sMAG to circulating supply of MAG (staked vs total)`,
 		apy: `Annual Percentage Yield, is the normalized representation of an interest rate, based on a compounding period over one year. Note that APYs provided are rather ballpark level indicators and not so much precise future results.`,
-		runway: `Runway, is the number of days sOHM emissions can be sustained at a given rate. Lower APY = longer runway`
+		runway: `Runway, is the number of days sMAG emissions can be sustained at a given rate. Lower APY = longer runway`
 	}
 }
 

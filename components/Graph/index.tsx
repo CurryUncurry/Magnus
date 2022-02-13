@@ -114,7 +114,7 @@ export const ProtocolOwnedLiquidityGraph = () => {
 			dataKey={['treasuryOhmDaiPOL']}
 			bulletpointColors={bulletpoints.pol}
 			infoTooltipMessage={tooltipInfoMessages().pol}
-			headerText={`Protocol Owned Liquidity OHM-DAI`}
+			headerText={`Protocol Owned Liquidity MAG-DAI`}
 			expandedGraphStrokeColor='#ffffff'
 			headerSubText={`${data && trim(data[0].treasuryOhmDaiPOL, 2)}% `}
 			stopColor={[['rgba(128, 204, 131, 1)', 'rgba(128, 204, 131, 0)']]}
@@ -122,7 +122,7 @@ export const ProtocolOwnedLiquidityGraph = () => {
 	)
 }
 
-export const OHMStakedGraph = () => {
+export const MAGStakedGraph = () => {
 	const data = graphData
 
 	const staked =
@@ -142,7 +142,7 @@ export const OHMStakedGraph = () => {
 			data={staked}
 			dataKey={['staked']}
 			dataFormat="percent"
-			headerText={`OHM Staked`}
+			headerText={`MAG Staked`}
 			stopColor={[['#55EBC7', '#47ACEB']]}
 			bulletpointColors={bulletpoints.staked}
 			infoTooltipMessage={tooltipInfoMessages().staked}
