@@ -1,15 +1,15 @@
-import { Box, BoxProps, Flex, FlexProps } from "@chakra-ui/react"
-import ValueCard, { ValueCardProps } from "@components/ValueCard"
-import { valueCards } from "@utils/datamocks"
-import { FC } from "react"
+import { Box, BoxProps, Flex, FlexProps } from '@chakra-ui/react'
+import ValueCard, { ValueCardProps } from '@components/ValueCard'
+import { valueCards } from '@utils/datamocks'
+import { FC } from 'react'
 
 const Dashboard: FC = () => {
-	return(
+	return (
 		<Box {...wrapperStyle}>
 			<Flex {...topFlexStyle}>
 				{
 					valueCards.map(
-						({title, value, delimiter, changePercentage, duration}: ValueCardProps, index) => (
+						({ title, value, delimiter, changePercentage, duration }: ValueCardProps, index) => (
 							<ValueCard
 								title={title}
 								value={value}
