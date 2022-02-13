@@ -133,7 +133,7 @@ export const OHMStakedGraph = () => {
 			timestamp: metric.timestamp
 		}))
 		.filter(metric => metric.staked < 100)
-		
+
 	return (
 	// @ts-ignore
 		<Chart
