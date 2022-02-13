@@ -30,7 +30,8 @@
       "@public/*": ["public/*"],
       "@theme/*": ["theme/*"],
       "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@helpers/*": ["helpers/*"]
     }
   },
   "exclude": [

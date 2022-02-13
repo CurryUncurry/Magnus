@@ -36,7 +36,8 @@ const sidebarStyle = {
 	flexDirection: 'column',
 	paddingBottom: '0px',
 	minHeight: 'calc(100 * var(--vh))',
-	pos: 'sticky',
+	pos: 'fixed',
+	left: 0,
 	top: 0,
 	w: sidebarWidth
 } as BoxProps
