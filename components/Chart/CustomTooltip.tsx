@@ -1,6 +1,8 @@
 import { Box, Text } from '@chakra-ui/react'
 import { CSSProperties } from 'react'
 
+const a = 10;
+
 interface TooltipPayloadItem {
   value: number;
   payload: {
