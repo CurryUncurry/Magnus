@@ -1,12 +1,11 @@
-import { useAppSelector } from '../../../app/hooks'
 import SidebarLabel from '../SidebarLabel'
 import Image from 'next/image'
 import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
-import { colors, iconStyles, layerStyles } from '../../../theme/foundations'
-import MoneyIcon from '../../Icons/nftAvatar/MoneyIcon'
-import BoostIcon from '../../Icons/nftAvatar/BoostIcon'
-import LockIcon from '../../Icons/nftAvatar/LockIcon'
-import TimeIcon from '../../Icons/nftAvatar/TimeIcon'
+import { colors, iconStyles, layerStyles } from '@theme/foundations'
+import MoneyIcon from '@components/Icons/nftAvatar/MoneyIcon'
+import BoostIcon from '@components/Icons/nftAvatar/BoostIcon'
+import LockIcon from '@components/Icons/nftAvatar/LockIcon'
+import TimeIcon from '@components/Icons/nftAvatar/TimeIcon'
 
 const NFTAvatar = () => {
 	const color = useToken('colors', 'white')

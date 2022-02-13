@@ -1,6 +1,5 @@
 import { Box, BoxProps, ResponsiveValue, useColorModeValue } from '@chakra-ui/react'
-import { useAppSelector } from '../../app/hooks'
-import { colors } from '../../theme/foundations'
+import { useAppSelector } from '@app/hooks'
 import Connect from './Connect'
 import Header from './Header'
 import Manager from './Manager'

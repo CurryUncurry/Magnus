@@ -1,11 +1,11 @@
 import SidebarLabel from '../SidebarLabel'
 import ManagerButton from './ManagerButton'
-import DashboardIcon from '../../Icons/manager/DashboardIcon'
-import { iconStyles } from '../../../theme/foundations'
-import StakingIcon from '../../Icons/manager/StakingIcon'
-import FAQIcon from '../../Icons/manager/FAQIcon'
-import BondsIcon from '../../Icons/manager/BondsIcon'
-import DocumentsIcon from '../../Icons/manager/DocumentsIcon'
+import { iconStyles } from '@theme/foundations'
+import DashboardIcon from '@components/Icons/manager/DashboardIcon'
+import StakingIcon from '@components/Icons/manager/StakingIcon'
+import FAQIcon from '@components/Icons/manager/FAQIcon'
+import BondsIcon from '@components/Icons/manager/BondsIcon'
+import DocumentsIcon from '@components/Icons/manager/DocumentsIcon'
 import { useRouter } from 'next/router'
 
 const managerButtons = [

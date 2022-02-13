@@ -1,8 +1,8 @@
 import { Box, BoxProps, IconProps } from '@chakra-ui/react'
-import { useAppSelector } from '../../../app/hooks'
-import { useHover } from '../../../hooks/useHover'
-import { colors } from '../../../theme/foundations'
-import SidebarArrowIcon from '../../Icons/header/SidebarArrowIcon'
+import { useAppSelector } from '@app/hooks'
+import { useHover } from '@hooks/useHover'
+import { colors } from '@theme/foundations'
+import SidebarArrowIcon from '@components/Icons/header/SidebarArrowIcon'
 
 interface IProps {
   onClick: () => void;

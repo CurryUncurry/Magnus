@@ -5,11 +5,17 @@ export const useVh = (): void => {
         // @ts-ignore
         document.querySelector(':root').style
             .setProperty('--vh', window.innerHeight/100 + 'px');
+
+        const listener = () => {
+          // @ts-ignore
+            document.querySelector(':root').style
+              .setProperty('--vh', window.innerHeight/100 + 'px');
+          }
     
-        window.addEventListener('resize', () => {
-        // @ts-ignore
-          document.querySelector(':root').style
-            .setProperty('--vh', window.innerHeight/100 + 'px');
-        })
+        window.addEventListener('resize', listener)
+
+        return () => {
+          document.removeEventListener('resize', listener)
+        }
       }, [])
 }

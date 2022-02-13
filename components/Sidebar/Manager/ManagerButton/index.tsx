@@ -1,8 +1,8 @@
 import { Box, BoxProps, useToken } from '@chakra-ui/react'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
-import { useHover } from '../../../../hooks/useHover'
-import { colors, fontSizes, iconStyles } from '../../../../theme/foundations'
+import { useHover } from '@hooks/useHover'
+import { colors, fontSizes } from '@theme/foundations'
 
 interface IProps {
   icon: (color: string) => ReactNode;

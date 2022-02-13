@@ -1,8 +1,7 @@
 import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
 import Link from 'next/link'
 import React from 'react'
-import { useAppDispatch } from '../../../app/hooks'
-import LogoIcon from '../../Icons/header/LogoIcon'
+import LogoIcon from '@components/Icons/header/LogoIcon'
 
 const Header = () => {
 	const color = useToken('colors', 'white')

@@ -1,6 +1,6 @@
 import { Box, BoxProps, IconProps, useToken } from '@chakra-ui/react'
-import { colors, iconStyles } from '../../../theme/foundations'
-import DropdownArrow from '../../Icons/tokenPrice/DropdownArrow'
+import { colors, iconStyles } from '@theme/foundations'
+import DropdownArrow from '@components/Icons/tokenPrice/DropdownArrow'
 import SidebarLabel from '../SidebarLabel'
 
 const TokenPrice = () => {
