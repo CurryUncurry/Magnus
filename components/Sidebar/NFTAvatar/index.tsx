@@ -37,13 +37,13 @@ const NFTAvatar = () => {
 
 const boostIconStyles = {
 	...iconStyles.defaultIcon,
-	color: colors['gray94']
+	color: 'gray94'
 } as IconProps
 
 const delimiterStyle = {
 	width: '2px',
 	height: '12px',
-	background: colors['orange'],
+	background: 'orange',
 	borderRadius: '6px 0px 0px 6px',
 	...layerStyles.orangeShadow
 } as BoxProps
@@ -51,7 +51,7 @@ const delimiterStyle = {
 const boostBlockStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	background: colors['black'],
+	background: 'black',
 	justifyContent: 'space-between',
 	width: '132px',
 	borderRadius: '8px',

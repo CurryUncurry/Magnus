@@ -24,7 +24,7 @@ const SidebarArrow = ({ onClick, styles }: IProps) => {
 			<SidebarArrowIcon
 				{...sidebarArrowStyle}
 				transform={!isSidebarOpen ? 'rotate(180deg)' : 'none'}
-				color={buttonHov ? colors['orange'] : colors['black']}
+				color={buttonHov ? 'orange' : 'black'}
 			/>
 		</Box>
 	)

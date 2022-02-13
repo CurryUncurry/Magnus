@@ -35,7 +35,7 @@ const ThemeButton = ({ icon, label, isActive = false, ...rest }: IProps) => {
 
 const pointerStyle = (isActive: boolean) =>
 	({
-		background: colors['orange'],
+		background: 'orange',
 		opacity: !isActive ? '0%' : '100%',
 		position: 'absolute',
 		borderRadius: '8px',
@@ -57,15 +57,15 @@ const themeButtonStyle = {
 	marginTop: 'auto',
 	display: 'flex',
 	flexDirection: 'row',
-	background: colors['black']
+	background: 'black'
 } as BoxProps
 
 const activeThemeButtonStyle = {
-	color: colors['white']
+	color: 'white'
 }
 
 const unactiveThemeButtonStyle = {
-	color: colors['gray94'],
+	color: 'gray94',
 	_hover: activeThemeButtonStyle
 }
 

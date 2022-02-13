@@ -38,7 +38,7 @@ const currencyStyle = {
 	height: '78px',
 	padding: '12px',
 	fontWeight: 500,
-	color: colors['white'],
+	color: 'white',
 	bgImage: `url(${require('../../../public/icons/TokenPrice.svg')})`,
 	backgroundRepeat: 'no-repeat',
 	backgroundSize: 'cover'

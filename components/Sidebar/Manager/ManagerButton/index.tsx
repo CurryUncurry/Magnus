@@ -65,12 +65,12 @@ const managerButtonStyle = {
 } as BoxProps
 
 const activeManagerButtonStyle = {
-	color: colors['white'],
+	color: 'white',
 	transition: '.3s ease'
 } as BoxProps
 
 const unactiveManagerButtonStyle = {
-	color: colors['gray94'],
+	color: 'gray94',
 	_hover: activeManagerButtonStyle
 } as BoxProps
 
