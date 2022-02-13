@@ -35,15 +35,15 @@ const sidebarStyle = {
 	display: 'flex',
 	flexDirection: 'column',
 	paddingBottom: '0px',
-	h: 'calc(100 * var(--vh))',
-	pos: 'fixed',
-	left: 0,
+	minHeight: 'calc(100 * var(--vh))',
+	pos: 'sticky',
 	top: 0,
 	w: sidebarWidth
 } as BoxProps
 
 const sidebarPlaceholder = {
 	w: sidebarWidth,
+	pos: 'relative',
 	h: '100%'
 } as BoxProps
 
