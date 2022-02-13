@@ -28,3 +28,5 @@ yarn.lock
 
 # tsconfig cache
 tsconfig.tsbuildinfo
+
+.idea
