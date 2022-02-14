@@ -13,7 +13,8 @@ const colors: { [name: string]: string & ResponsiveValue<Property.Color> } = {
 	red: '#DF1D1D',
 	line: '#393B43',
 	gray58: '#585858',
-	gray37: '#373737'
+	gray37: '#373737',
+	gradient: 'linear-gradient(#B93FF0, #FD7B3B)'
 }
 
 export default colors

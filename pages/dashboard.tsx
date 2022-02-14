@@ -1,8 +1,10 @@
 import { Box, BoxProps, Flex, FlexProps, Grid, GridProps } from '@chakra-ui/react'
-import { MarketValueGraph, MAGStakedGraph, ProtocolOwnedLiquidityGraph, RiskFreeValueGraph, RunwayAvailableGraph, TotalValueDepositedGraph } from '@components/Graph'
+import LineDashboardChart from '@components/Charts/LineDashboardChart'
+import AreaDashboardChart from '@components/Charts/AreaDashboardChart'
 import ValueCard, { ValueCardProps } from '@components/ValueCard'
 import { valueCards } from '@utils/datamocks'
 import { FC } from 'react'
+import { data, stackedData } from '@utils/data'
 
 const Dashboard: FC = () => {
 	return (
@@ -26,27 +28,23 @@ const Dashboard: FC = () => {
 
 			<Grid {...chartsWrapperStyle}>
 				<Box {...chartBoxStyle}>
-					<TotalValueDepositedGraph />
+					<Box {...chartLabelStyle}>Market Cap</Box>
+					<LineDashboardChart />
 				</Box>
 
 				<Box {...chartBoxStyle}>
-					<MarketValueGraph />
+					<Box {...chartLabelStyle}>Total Value Deposited</Box>
+					<LineDashboardChart />
 				</Box>
 
 				<Box {...chartBoxStyle}>
-					<RiskFreeValueGraph />
+					<Box {...chartLabelStyle}>Market Value of Treasury Assets</Box>
+					<AreaDashboardChart data={stackedData} stacked />
 				</Box>
 
 				<Box {...chartBoxStyle}>
-					<ProtocolOwnedLiquidityGraph />
-				</Box>
-
-				<Box {...chartBoxStyle}>
-					<MAGStakedGraph />
-				</Box>
-
-				<Box {...chartBoxStyle}>
-					<RunwayAvailableGraph />
+					<Box {...chartLabelStyle}>MGS Stacked</Box>
+					<AreaDashboardChart data={data} />
 				</Box>
 			</Grid>
 		</Box>
@@ -75,6 +73,11 @@ const chartBoxStyle = {
 	bg: 'black-secondary',
 	borderRadius: '8px',
 	padding: '16px'
+} as BoxProps
+
+const chartLabelStyle = {
+	fontWeight: 500,
+	marginBottom: '16px'
 } as BoxProps
 
 export default Dashboard
