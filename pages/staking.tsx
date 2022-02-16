@@ -1,10 +1,21 @@
-import Header from '@components/Header'
+import DataBoard from '@components/DataBoard'
+import StakingForm from '@components/StakingForm'
+import ValueCard from '@components/ValueCard'
+import { stakePage } from '@utils/datamocks'
 
 const Staking = () => {
 	return (
 		<>
-			<Header />
-			<span>Staking page</span>
+			<DataBoard>
+				{stakePage.map(({ title, value, delimiter }) => (
+					<ValueCard
+						title={title}
+						value={value}
+						delimiter={delimiter}
+					/>
+				))}
+			</DataBoard>
+			<StakingForm />
 		</>
 	)
 }

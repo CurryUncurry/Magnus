@@ -7,7 +7,7 @@ import TokenPrice from './TokenPrice'
 import NFTAvatar from './NFTAvatar'
 import Footer from './Footer'
 
-const sidebarWidth: ResponsiveValue<string> = '232px'
+export const sidebarWidth: ResponsiveValue<string> = '232px'
 
 const Sidebar = () => {
 	const isConnected = useAppSelector((state) => state.wallet.beaconConnection)

@@ -6,6 +6,7 @@ const fontSizes = {
 	h5: '2rem',
 	formField: '1.8rem',
 	cardText: '1.8rem',
+	lgText: '1.25rem',
 	text: '1rem',
 	secText: '0.75rem'
 }

@@ -8,7 +8,7 @@ import { data, stackedData } from '@utils/data'
 
 const Dashboard: FC = () => {
 	return (
-		<Box {...wrapperStyle}>
+		<>
 			<Flex {...topFlexStyle}>
 				{
 					valueCards.map(
@@ -20,6 +20,7 @@ const Dashboard: FC = () => {
 								changePercentage={changePercentage}
 								duration={duration}
 								key={`valuecard-${index}`}
+								withBadge
 							/>
 						)
 					)
@@ -47,15 +48,9 @@ const Dashboard: FC = () => {
 					<AreaDashboardChart data={data} />
 				</Box>
 			</Grid>
-		</Box>
+		</>
 	)
 }
-
-const wrapperStyle = {
-	p: '28px 32px',
-	maxW: '1200px',
-	w: '100%'
-} as BoxProps
 
 const topFlexStyle = {
 	justify: 'space-between',

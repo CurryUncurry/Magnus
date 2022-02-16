@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 import { store } from '@app/store'
-import { Box, ChakraProvider } from '@chakra-ui/react'
+import { Box, BoxProps, ChakraProvider } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { IntlProvider } from 'react-intl'
 import Sidebar from '@components/Sidebar'
@@ -19,10 +19,17 @@ export default function App ({ Component, pageProps }: AppProps) {
 				<Provider store={store}>
 					<Box display="flex" flexDirection="row">
 						{router.pathname !== '/' ? <Sidebar /> : null}
-						<Component {...pageProps} />
+						<Box {...wrapperStyle}>
+							<Component {...pageProps} />
+						</Box>
 					</Box>
 				</Provider>
 			</ChakraProvider>
 		</IntlProvider>
 	)
 }
+const wrapperStyle = {
+	p: '28px 32px',
+	maxW: '1200px',
+	w: '100%'
+} as BoxProps

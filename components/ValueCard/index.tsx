@@ -18,11 +18,12 @@ export type ValueCardProps = {
     title: string,
     value: number,
     delimiter: string,
-    changePercentage: ChangePercentage
-    duration: DuarionValues
+    changePercentage?: ChangePercentage,
+    duration?: DuarionValues,
+	withBadge?: boolean,
 } & BoxProps
 
-const ValueCard: FC<ValueCardProps> = ({ title, value, delimiter, changePercentage, duration, ...rest }) => {
+const ValueCard: FC<ValueCardProps> = ({ title, value, delimiter, changePercentage, duration, withBadge, ...rest }) => {
 	const color = useColorModeValue('black', 'white')
 	return (
 		<Box {...rest}>
@@ -31,12 +32,12 @@ const ValueCard: FC<ValueCardProps> = ({ title, value, delimiter, changePercenta
 				<Heading color={color} {...h4Style}>
 					<FormattedNumber value={value}/>&nbsp;{delimiter}
 				</Heading>
-
-				<ChangeBadge
-					value={changePercentage.value}
-					direction={changePercentage.direction}
+				{withBadge ? <ChangeBadge
+					value={changePercentage!.value}
+					direction={changePercentage!.direction}
 					ml='12px'
-				/>
+				/> : null}
+
 			</Flex>
 		</Box>
 	)

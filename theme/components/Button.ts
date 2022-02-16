@@ -117,7 +117,7 @@ const Button = {
 			p: '1rem 4rem'
 		},
 		md: {
-			p: '2rem 6rem'
+			p: '10px 16px'
 		}
 	}
 }
