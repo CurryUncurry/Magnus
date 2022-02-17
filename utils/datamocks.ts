@@ -71,3 +71,30 @@ export const stakePage = [
     delimiter: "MGS",
   },
 ];
+
+export const bondsPage = [
+  {
+    title: "MGS price",
+    value: 14.55,
+    delimiter: "$",
+  },
+  {
+    title: "Treasury balance",
+    value: 5133534,
+    delimiter: "$",
+  },
+  {
+    title: "Vesting term",
+    value: 5,
+    delimiter: "days",
+  },
+];
+
+export const bondsTable = [ {
+  icon: "K",
+  bond: "Kolibri",
+  price: "66.43$",
+  roi: "2.64%",
+  duration: "14 days"
+}
+]

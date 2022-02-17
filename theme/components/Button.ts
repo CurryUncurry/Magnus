@@ -87,15 +87,15 @@ const Button = {
 		},
 		outline: {
 			...outlineStyles,
-			borderColor: 'red',
-			color: 'red',
+			borderColor: 'orange',
+			color: 'orange',
 			_hover: {
-				bg: 'red',
+				bg: 'orange',
 				color: 'white'
 			},
 			_active: {
 				bg: 'white',
-				color: 'red'
+				color: 'orange'
 			}
 		},
 		'outline-secondary': {

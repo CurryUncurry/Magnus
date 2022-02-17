@@ -20,7 +20,7 @@ const pageFormWrapStyle = {
 
 const innerBoxStyle = {
 	minHeight: '40px',
-	width: '50%',
+	minWidth: '40%',
 	bg: 'black',
 	borderRadius: '8px',
 	padding: '10px'

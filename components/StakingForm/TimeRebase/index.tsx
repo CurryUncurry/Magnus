@@ -19,7 +19,7 @@ const TimeRebase: FC<IProps> = ({ endTime, ...rest }) => {
 
 	return (
 		<Flex justify="space-between" align="center" {...rest}>
-			<Box fontWeight="500">Time staking (3,3)</Box>
+			<Box fontWeight="500" fontSize="lgText">Time staking (3,3)</Box>
 			<Flex fontWeight="500" align="center">
 				<Flex {...timeStyle}>{timeToRebase}</Flex>
         to next rebase
