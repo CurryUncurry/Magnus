@@ -27,7 +27,7 @@ const StakingForm = ({ ...rest }: IProps) => {
 				<StakeData label="Balance" value="1337 MGS" />
 				<StakeData label="Staked balance" value="1000 MGS" />
 				<StakeData label="Next reward" value="100 MGS" />
-				<StakeData label="Next yiels" value="0.488%" />
+				<StakeData label="Next yield" value="0.488%" />
 			</Box>
 		</PageFormWrap>
 	)
