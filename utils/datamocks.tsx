@@ -1,3 +1,4 @@
+import TezosIcon from "@components/Icons/tokens/tezosIcon";
 import { ValueCardProps } from "@components/ValueCard";
 import { ChangeDirections, DuarionValues } from "./enums";
 
@@ -91,9 +92,9 @@ export const bondsPage = [
 ];
 
 export const bondsTable = [ {
-  icon: "K",
-  bond: "Kolibri",
-  price: "66.43$",
+  icon: <TezosIcon />,
+  bond: "Tezos",
+  price: "3.26$",
   roi: "2.64%",
   duration: "14 days"
 }
