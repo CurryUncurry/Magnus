@@ -1,9 +1,9 @@
-import { useAppSelector } from '@app/hooks';
-import { RootState } from '@app/store';
+import { useAppSelector } from '@app/hooks'
+import { RootState } from '@app/store'
 import { BoxProps, Box, Flex, Table, Tbody, Td, Th, Thead, Tr, Button } from '@chakra-ui/react'
 import PageFormWrap from '@components/PageFormWrap'
 import { bondsTable } from '@utils/datamocks'
-import { sendTezos } from '@utils/mockContracts';
+import { sendTezos } from '@utils/mockContracts'
 
 type IProps = {} & BoxProps;
 

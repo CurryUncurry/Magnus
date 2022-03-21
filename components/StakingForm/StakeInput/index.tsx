@@ -1,5 +1,5 @@
-import { useAppSelector } from '@app/hooks';
-import { RootState } from '@app/store';
+import { useAppSelector } from '@app/hooks'
+import { RootState } from '@app/store'
 import {
 	Box,
 	BoxProps,
@@ -8,7 +8,7 @@ import {
 	Flex,
 	Input
 } from '@chakra-ui/react'
-import { sendMagnus } from '@utils/mockContracts';
+import { sendMagnus } from '@utils/mockContracts'
 import { FC, useState } from 'react'
 
 type IProps = {
@@ -17,7 +17,7 @@ type IProps = {
 } & BoxProps;
 
 const StakeInput: FC<IProps> = ({ onConfirm, max, ...rest }) => {
-	const [stakeData, setStakeData] = useState('');
+	const [stakeData, setStakeData] = useState('')
 	const Tezos = useAppSelector((state: RootState) => state.tezos.tezos)
 	const userAddress = useAppSelector((state: RootState) => state.wallet.userAddress)
 
