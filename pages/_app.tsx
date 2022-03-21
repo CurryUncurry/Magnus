@@ -54,6 +54,7 @@ export default function App ({ Component, pageProps }: AppProps) {
 	)
 }
 const wrapperStyle = {
+	m: '0 auto',
 	p: '28px 32px',
 	maxW: '1200px',
 	w: '100%'
