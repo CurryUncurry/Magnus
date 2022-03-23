@@ -4,7 +4,7 @@ import AreaDashboardChart from '@components/Charts/AreaDashboardChart'
 import ValueCard, { ValueCardProps } from '@components/ValueCard'
 import { valueCards } from '@utils/datamocks'
 import { FC } from 'react'
-import { data, stackedData } from '@utils/data'
+import { data, mgsStackedData, stackedData } from '@utils/data'
 
 const Dashboard: FC = () => {
 	return (
@@ -45,7 +45,7 @@ const Dashboard: FC = () => {
 
 				<Box {...chartBoxStyle}>
 					<Box {...chartLabelStyle}>MGS Stacked</Box>
-					<AreaDashboardChart data={data} />
+					<AreaDashboardChart yAxisLabel='%' data={mgsStackedData} />
 				</Box>
 			</Grid>
 		</>

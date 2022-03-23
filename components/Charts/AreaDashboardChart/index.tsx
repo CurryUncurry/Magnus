@@ -14,9 +14,10 @@ import CustomTooltip from '../CustomTooltip'
 interface IProps {
     data: { [key: string]: any }[];
     stacked?: boolean;
+	yAxisLabel?: string;
 }
 
-const AreaDashboardChart = ({ data, stacked = false }: IProps) => {
+const AreaDashboardChart = ({ data, yAxisLabel = 'm', stacked = false }: IProps) => {
 	const gray = useToken('colors', 'gray94')
 	const line = useToken('colors', 'line')
 	const white = useToken('colors', 'white')
@@ -42,7 +43,7 @@ const AreaDashboardChart = ({ data, stacked = false }: IProps) => {
 
 	return (
 		<ResponsiveContainer width="100%" height={274}>
-			<AreaChart data={data} margin={{ left: -20, bottom: 0, right: 10 }}>
+			<AreaChart data={data} margin={{ left: -15, bottom: 0, right: 10 }}>
 				<defs>
 					<linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
 						<stop offset="0%" stopColor="#B93FF0" />
@@ -59,7 +60,7 @@ const AreaDashboardChart = ({ data, stacked = false }: IProps) => {
 					stroke={white}
 					axisLine={false}
 					tickLine={false}
-					unit="m"
+					unit={yAxisLabel}
 				/>
 				<CartesianGrid strokeDasharray="0" stroke={line} horizontal={false} />
 				<Tooltip

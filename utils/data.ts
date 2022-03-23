@@ -13,6 +13,21 @@ export const data = [
 	{ name: 'Dec', value: 10, value2: 4, value3: 5 }
 ]
 
+export const mgsStackedData = [
+	{ name: 'Jan', value: 80, value2: 4, value3: 5 },
+	{ name: 'Feb', value: 80, value2: 4, value3: 5 },
+	{ name: 'Mar', value: 79, value2: 4, value3: 5 },
+	{ name: 'Apr', value: 80, value2: 4, value3: 5 },
+	{ name: 'May', value: 90, value2: 4, value3: 5 },
+	{ name: 'Jun', value: 85, value2: 4, value3: 5 },
+	{ name: 'Jul', value: 85, value2: 4, value3: 5 },
+	{ name: 'Aug', value: 87, value2: 4, value3: 5 },
+	{ name: 'Sep', value: 81, value2: 4, value3: 5 },
+	{ name: 'Oct', value: 91, value2: 4, value3: 5 },
+	{ name: 'Nov', value: 90, value2: 4, value3: 5 },
+	{ name: 'Dec', value: 90, value2: 4, value3: 5 }
+]
+
 export const stackedData = [
 	{ name: 'Jan', value: 1, value2: [1, 4], value3: [4, 5] },
 	{ name: 'Feb', value: 2, value2: [2, 5], value3: [5, 6] },
