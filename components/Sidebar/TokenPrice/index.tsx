@@ -12,7 +12,7 @@ const TokenPrice = () => {
 			<Box {...currencyStyle}>
 				<Box marginBottom="6px">Course</Box>
 				<Box {...dropdownButtonStyle}>
-					<span>1 MG = 1.3 $</span>
+					<span>1 MGS = 1.3 $</span>
 
 					<DropdownArrow color={color} {...iconStyle} />
 				</Box>
